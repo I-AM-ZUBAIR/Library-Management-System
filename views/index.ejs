@@ -1,4 +1,74 @@
-<div class="container">
-    <h1>Hello Dashboard</h1>
-    <p>This is the Student Management system .</p>
-</div>
+<h1>Welcome to the Library Management System</h1>
+<p>This is the home page.</p>
+
+<h2>Summary</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Total Books</td>
+      <td><%= typeof summary !== 'undefined' ? summary.totalBooks : 0 %></td>
+    </tr>
+    <tr>
+      <td>Total Members</td>
+      <td><%= typeof summary !== 'undefined' ? summary.totalMembers : 0 %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Books</h2>
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Year</th>
+      <th>Available Copies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (typeof books !== 'undefined') { %>
+      <% books.forEach(function(book) { %>
+        <tr>
+          <td><%= book.id %></td>
+          <td><%= book.title %></td>
+          <td><%= book.author %></td>
+          <td><%= book.genre %></td>
+          <td><%= book.year %></td>
+          <td><%= book.availableCopies %></td>
+        </tr>
+      <% }); %>
+    <% } %>
+  </tbody>
+</table>
+
+<h2>Members</h2>
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Membership Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (typeof members !== 'undefined') { %>
+      <% members.forEach(function(member) { %>
+        <tr>
+          <td><%= member.id %></td>
+          <td><%= member.firstName %></td>
+          <td><%= member.lastName %></td>
+          <td><%= member.membershipDate %></td>
+        </tr>
+      <% }); %>
+    <% } %>
+  </tbody>
+</table>

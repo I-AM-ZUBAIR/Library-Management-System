@@ -1,0 +1,20 @@
+<h1>Edit Member</h1>
+<form action="/members/edit" method="POST">
+  <div class="mb-3">
+    <label for="id" class="form-label">Member ID:</label>
+    <input type="number" class="form-control" id="id" name="id" required />
+  </div>
+  <div class="mb-3">
+    <label for="firstName" class="form-label">First Name:</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" required />
+  </div>
+  <div class="mb-3">
+    <label for="lastName" class="form-label">Last Name:</label>
+    <input type="text" class="form-control" id="lastName" name="lastName" required />
+  </div>
+  <div class="mb-3">
+    <label for="membershipDate" class="form-label">Membership Date:</label>
+    <input type="date" class="form-control" id="membershipDate" name="membershipDate" required />
+  </div>
+  <button type="submit" class="btn btn-primary">Update Member</button>
+</form>

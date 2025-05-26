@@ -1,0 +1,21 @@
+<h1>Members List</h1>
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Member ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Membership Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% members.forEach(function(member) { %>
+      <tr>
+        <td><%= member.id %></td>
+        <td><%= member.firstName %></td>
+        <td><%= member.lastName %></td>
+        <td><%= member.membershipDate %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
